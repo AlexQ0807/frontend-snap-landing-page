@@ -17,6 +17,8 @@ Your users should be able to:
 - View the optimal layout for the content depending on their device's screen size
 - See hover states for all interactive elements on the page
 
+Live Demo: https://frontend-snap-landing-page.pages.dev/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
