@@ -1,0 +1,56 @@
+@import "../../styles.scss";
+
+.menu-container{
+    display: flex;
+}
+
+.menu-section{
+    display: flex;
+    padding: 10px;
+}
+
+
+
+// Logo
+.logo-menu{
+    min-width: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-menu > img{
+    margin-top: 1vh;
+}
+
+
+//nav
+.nav{
+    width: 100%;
+}
+
+
+.icon-container{
+
+}
+
+
+// menu icon button 
+.menu-section a.icon {
+    display: none;
+}
+
+.menu-icon{
+    cursor: pointer;
+}
+
+@media screen and (max-width: $width_threshold_md) {
+    .menu-container{
+        justify-content: space-between;
+    }
+
+    .nav {display: none;}
+    .menu-section a.icon {
+      float: right;
+      display: block;
+    }
+}

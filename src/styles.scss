@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+$text-gray: hsl(0, 0%, 41%);
+$text-white: hsl(0, 0%, 98%);
+$text-black: hsl(0, 0%, 8%);
+$btn-border-radius: 8px;
+
+$width_threshold_md: 768px;
+
+$btn-raised-width: 120px;
+$btn-raised-height: 40px;
+
+$btn-border-color: $text-gray;
+$btn-border-color-hover: $text-black;
+
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: "Epilogue", "Helvetica Neue", sans-serif !important; 
+    font-size: 18px;
+    color: $text-gray;
+}
+
+.raised-button{
+    width: $btn-raised-width;
+    height: $btn-raised-height;
+}

@@ -1,0 +1,70 @@
+@import "../../styles.scss";
+
+
+.nav-container{
+    display: flex;
+}
+
+.menu-section{
+    display: flex;
+    padding: 10px;
+}
+
+
+.left-menu{
+    width: 100%;
+    //min-width: 400px;
+}
+
+.right-menu{
+    //min-width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button{
+    border-radius: $btn-border-radius;
+    border-color: $btn-border-color;
+}
+
+
+.menu-button:hover{
+    border-color: $btn-border-color-hover;
+}
+
+
+@media screen and (max-width: $width_threshold_md) {
+    .nav-container{
+        flex-direction: column;
+    }
+
+    .menu-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-menu{
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .right-menu{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mat-menus{
+        display: none;
+    }
+
+    .nav-close-panel{
+        display: flex;
+        justify-content: end;
+    }
+
+    .nav-close-panel > mat-icon{
+        cursor: pointer;
+        padding: 10px;
+        transform: scale(1.5);  // enlarge the icon
+    }
+}

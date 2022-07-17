@@ -1,0 +1,50 @@
+<div class="nav-container">
+    <div class="nav-close-panel" *ngIf="isNav">
+        <mat-icon aria-hidden="false" (click)="sidenav.close()">close</mat-icon>
+    </div>
+    <div class="left-menu menu-section">
+        <button mat-button [matMenuTriggerFor]="menuButton1" #matButton1="matMenuTrigger" *ngIf="!isNav">
+            Feature
+            <mat-icon *ngIf="matButton1.menuOpen" aria-hidden="false">expand_more</mat-icon>
+            <mat-icon *ngIf="!matButton1.menuOpen" aria-hidden="false">expand_less</mat-icon>
+        </button>
+        <mat-menu #menuButton1="matMenu" class="mat-menus">
+            <button *ngFor="let item of featureList" mat-menu-item><img src="{{item.imgUrl}}" />&nbsp;&nbsp;{{item.title}}</button>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="menuButton2" #matButton2="matMenuTrigger" *ngIf="!isNav">
+            Companies
+            <mat-icon *ngIf="matButton2.menuOpen" aria-hidden="false">expand_more</mat-icon>
+            <mat-icon *ngIf="!matButton2.menuOpen" aria-hidden="false">expand_less</mat-icon>
+        </button>
+        <mat-menu #menuButton2="matMenu" class="mat-menus">
+            <button *ngFor="let item of companiesList" mat-menu-item>{{item.title}}</button>
+        </mat-menu>
+
+        <button mat-button (click)="toggleFeatures()" *ngIf="isNav">
+            Feature
+            <mat-icon *ngIf="featureOpen" aria-hidden="false">expand_more</mat-icon>
+            <mat-icon *ngIf="!featureOpen" aria-hidden="false">expand_less</mat-icon>
+        </button>
+        <div *ngIf="featureOpen">
+            <button *ngFor="let item of featureList" mat-menu-item><img src="{{item.imgUrl}}" />&nbsp;&nbsp;{{item.title}}</button>
+        </div>
+
+        <button mat-button (click)="toggleCompanies()" *ngIf="isNav">
+            Companies
+            <mat-icon *ngIf="companiesOpen" aria-hidden="false">expand_more</mat-icon>
+            <mat-icon *ngIf="!companiesOpen" aria-hidden="false">expand_less</mat-icon>
+        </button>
+        <div *ngIf="companiesOpen">
+            <button *ngFor="let item of companiesList" mat-menu-item>{{item.title}}</button>
+        </div>
+
+        <button mat-button >Careers</button>
+        <button mat-button >About</button>
+    </div>
+    
+    <div class="right-menu menu-section">
+        <button mat-button >Login</button>
+        <button mat-stroked-button class="menu-button raised-button">Register</button>
+    </div>
+</div>

@@ -2,6 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
+## The challenge
+
+This is a solution to [Intro section with dropdown navigation](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5).
+
+
+Your challenge is to build out this intro section with dropdown navigation and get it looking as close to the design as possible.
+
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+
+Your users should be able to:
+
+- View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
+- View the optimal layout for the content depending on their device's screen size
+- See hover states for all interactive elements on the page
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
